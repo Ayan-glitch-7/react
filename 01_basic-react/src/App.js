@@ -1,6 +1,6 @@
 function App() {
   return (
-    <hi>chai aur code !</hi>
+    <h1>chai aur code !</h1>
   );
 }
 
