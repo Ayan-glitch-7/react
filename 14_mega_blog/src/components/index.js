@@ -4,8 +4,8 @@ import Container from "./container/Container";
 import Logo from "./Logo";
 import LogoutbBtn from "./header/LogoutbBtn";
 import RTE from "./RTE";
-import Signup from "../pages/Signup";
-import Login from "../pages/Login";
+import Login from "./Login";
+import Signup from "./Signup";
 import PostForm from "./post-form/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
@@ -20,8 +20,8 @@ export {
   Logo,
   LogoutbBtn,
   RTE,
-  Signup,
   Login,
+  Signup,
   PostForm,
   PostCard,
   AuthLayout,

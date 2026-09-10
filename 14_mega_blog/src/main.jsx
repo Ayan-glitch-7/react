@@ -1,18 +1,21 @@
-import React, { StrictMode } from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App.jsx";
-import { Provider } from "react-redux";
-import store from "./store/store.js";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { AuthLayout, Login } from "./components/index.js";
+import React from "react";
 import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import "./index.css";
+import store from "./store/store.js";
+
+import { AuthLayout } from "./components/index.js";
+
 import AddPost from "./pages/AddPost.jsx";
-import Home from "./pages/Home.jsx";
-import Signup from "./pages/Signup.jsx";
-import EditPost from "./pages/EditPost.jsx";
-import Post from "./pages/Post.jsx";
 import AllPosts from "./pages/AllPosts.jsx";
+import EditPost from "./pages/EditPost.jsx";
+import Home from "./pages/Home.jsx";
+import Login from "./pages/Login.jsx";
+import Post from "./pages/Post.jsx";
+import Signup from "./pages/Signup.jsx";
+import App from "./App.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +46,6 @@ const router = createBrowserRouter([
         path: "/all-posts",
         element: (
           <AuthLayout authentication>
-            {" "}
             <AllPosts />
           </AuthLayout>
         ),
@@ -52,7 +54,6 @@ const router = createBrowserRouter([
         path: "/add-post",
         element: (
           <AuthLayout authentication>
-            {" "}
             <AddPost />
           </AuthLayout>
         ),
@@ -61,7 +62,6 @@ const router = createBrowserRouter([
         path: "/edit-post/:slug",
         element: (
           <AuthLayout authentication>
-            {" "}
             <EditPost />
           </AuthLayout>
         ),
