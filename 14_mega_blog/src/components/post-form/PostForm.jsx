@@ -232,7 +232,7 @@ function PostForm({ post }) {
 
                 <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                   <img
-                    src={Service.getFilePreview(post.featuredImage)}
+                    src={Service.getFileView(post.featuredImage)}
                     alt={post.title}
                     className="h-48 w-full object-cover"
                   />

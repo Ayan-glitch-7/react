@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
+
 import Service from "../appwrite/configs";
 import { Button, Container } from "../components";
 
@@ -76,9 +77,9 @@ export default function Post() {
         <article className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg shadow-slate-200/60">
           {/* Featured Image */}
           {post.featuredImage && (
-            <div className="relative h-[300px] w-full overflow-hidden md:h-[480px]">
+            <div className="relative h-75 w-full overflow-hidden md:h-120">
               <img
-                src={Service.getFilePreview(post.featuredImage)}
+                src={Service.getFileView(post.featuredImage)}
                 alt={post.title}
                 className="h-full w-full object-cover"
               />

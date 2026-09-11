@@ -19,7 +19,7 @@ function RTE({ name, control, label, defaultValue = "" }) {
           render={({ field: { onChange, value } }) => (
             <Editor
               apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
-              value={value}
+              value={value || ""}
               onEditorChange={onChange}
               init={{
                 height: 450,
@@ -71,7 +71,9 @@ function RTE({ name, control, label, defaultValue = "" }) {
                     background: #ffffff;
                   }
 
-                  h1, h2, h3 {
+                  h1,
+                  h2,
+                  h3 {
                     color: #0f172a;
                   }
 

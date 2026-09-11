@@ -16,9 +16,17 @@ function PostCard({ $id, title, featuredImage, content, status }) {
       <Link to={`/post/${$id}`} className="block overflow-hidden">
         <div className="relative h-52 overflow-hidden bg-slate-100">
           <img
-            src={Service.getFilePreview(featuredImage)}
+            src={Service.getFileView(featuredImage)}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            onError={(e) => {
+              console.log("Image failed to load");
+              console.log("Featured Image ID:", featuredImage);
+              console.log("Preview URL:", Service.getFileView(featuredImage));
+            }}
+            onLoad={() => {
+              console.log("Image loaded successfully");
+            }}
           />
 
           {/* Image Overlay */}

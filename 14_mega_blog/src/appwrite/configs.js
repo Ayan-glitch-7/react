@@ -1,5 +1,13 @@
 import config from "../config/config.js";
-import { Client, Databases, ID, Query, Storage } from "appwrite";
+import {
+  Client,
+  Databases,
+  ID,
+  Permission,
+  Query,
+  Role,
+  Storage,
+} from "appwrite";
 
 export class Service {
   client = new Client();
@@ -101,6 +109,7 @@ export class Service {
         config.appwriteBucketId,
         ID.unique(),
         file,
+        [Permission.read(Role.any())],
       );
     } catch (error) {
       console.log("Appwrite service :: uploadFile :: error", error);
@@ -119,8 +128,8 @@ export class Service {
     }
   }
 
-  getFilePreview(fileId) {
-    return this.bucket.getFilePreview(config.appwriteBucketId, fileId);
+  getFileView(fileId) {
+    return this.bucket.getFileView(config.appwriteBucketId, fileId);
   }
 }
 
