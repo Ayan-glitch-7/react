@@ -34,7 +34,7 @@ function Header() {
             to="/"
             className="flex shrink-0 items-center transition-transform duration-200 hover:scale-[1.02]"
           >
-            <Logo width="130px" />
+            <Logo width="110px" />
           </Link>
 
           {/* Navigation */}

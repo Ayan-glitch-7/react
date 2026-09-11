@@ -3,10 +3,10 @@ import React from "react";
 function Logo({ width = "130px", className = "" }) {
   return (
     <img
-      src="/logo.webp"
-      alt="Ayan Blog"
+      src="/logo.png"
+      alt="Ayan"
       width={width}
-      className={`object-contain ${className}`}
+      className={`h-auto object-contain ${className}`}
     />
   );
 }
